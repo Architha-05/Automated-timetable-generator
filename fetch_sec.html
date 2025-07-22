@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Student Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 14px;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #timetableContainer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        td {
+            font-size: 16px;
+        }
+
+        td:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        td:hover {
+            background-color: #f1f1f1;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ff4444;
+        }
+
+        .success-message {
+            font-size: 18px;
+            color: #4CAF50;
+        }
+
+        #back {
+            margin-top: 20px;
+            background-color: #888;
+        }
+
+        #back:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Timetable Viewer</h1>
+        <form id="timetableForm">
+            <label for="sectionId">Enter Section ID: </label>
+            <input type="text" id="sectionId" name="sectionId" required />
+            <button id="btn" type="submit">Show Timetable</button>
+        </form>
+
+        <div id="timetableContainer"></div> <!-- Container to display the timetable -->
+        <button id="back" style="display: none;">Back</button>
+
+    </div>
+    <script>
+        document.getElementById("timetableForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const sectionId = document.getElementById("sectionId").value;
+            document.getElementById("back").style.display = "inline-block";
+        });
+
+        document.getElementById("back").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Optional: Axios for AJAX -->
+    <script src="excel.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR Timetable</title>
+    <style>
+        body {
+            background-color: rgba(0, 128, 117, 0.131);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        header p {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            text-align: center;
+        }
+
+        .card img.icon {
+            width: 250px;
+            height: 250px;
+            transition: transform 0.3s;
+        }
+
+        .card img.icon:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+
+        h2 {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>VVIT</p>
+        <p>TIMETABLE</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <a href="./adminlogin.html"><img src="admin.png" alt="Admin" class="icon"></a>
+            <img src="admin_name.png" alt="Admin Label"
+                style="width:150px;height:50px;position:absolute;top:460px;left:330px ">
+        </div>
+
+        <div class="card">
+            <a href="./fetch_fac.html"><img src="faculty.png" alt="Faculty" class="icon"></a>
+            <img src="faculty_name.png" alt="Faculty Label"
+                style="width:150px;height:50px;position:absolute;top:460px;left:700px ">
+        </div>
+
+        <div class="card">
+            <a href="./fetch_sec.html"><img src="student.png" alt="Student" class="icon"></a>
+            <img src="student_name.png" alt="Student Label"
+                style="width:150px;height:50px;position:absolute;top:460px;left:1050px ">
+        </div>
+    </div>
+
+    <h2>Click on the Icon</h2>
+
+</body>
+
+</html>

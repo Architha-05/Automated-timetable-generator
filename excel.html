@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sending</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #back {
+            background-color: #555;
+        }
+
+        .back-button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Upload Excel File to Generate Timetable</h2>
+    <input type="file" id="excelInput" accept=".xlsx, .xls" />
+    <div>
+        <button id="sendData">Send Data to Server</button>
+        <button id="back">Back</button>
+    </div>
+    <!-- <div id="output"></div> -->
+    <script>
+        document.getElementById("back").addEventListener("click", function () {
+            window.location.href = "index.html"; // or any other page
+        });
+    </script>
+    <script src="excel.js"></script>
+</body>
+
+</html>

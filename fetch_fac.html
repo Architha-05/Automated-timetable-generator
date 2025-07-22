@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 14px;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: none;
+            /* Initially hide the table */
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        td:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        td:hover {
+            background-color: #f1f1f1;
+        }
+
+        .error-message {
+            font-size: 18px;
+            color: #ff4444;
+            text-align: center;
+        }
+
+        .success-message {
+            font-size: 18px;
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        #back {
+            margin-top: 20px;
+            background-color: #888;
+            position: absolute;
+            left: 180px;
+        }
+
+        #back:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Fetching Faculty Timetable</h2>
+    <div class="input-container">
+        <input type="text" id="subIdInput" placeholder="Enter Faculty ID">
+        <button id="btn" type="submit">Get Timetable</button>
+    </div>
+
+    <div id="facultytable"></div>
+    <button id="back" style="display: none;">Back</button>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            const facultyId = document.getElementById("subIdInput").value.trim();
+            if (facultyId !== "") {
+                document.getElementById("back").style.display = "inline-block";
+            }
+        });
+
+        document.getElementById("back").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    </script>
+
+
+    <script src="excel.js"></script>
+
+</body>
+
+</html>

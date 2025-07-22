@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "mini_project_tt_26",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Lab.js",
+  "scripts": {
+    "start": "node Allocate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2",
+    "node-fetch": "^3.3.2"
+  }
+}

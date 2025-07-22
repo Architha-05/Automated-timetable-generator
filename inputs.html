@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sending</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .form-group {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    #output {
+      white-space: pre-wrap;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    #back {
+      margin-top: 20px;
+      background-color: #888;
+    }
+
+    #back:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Section Allocation</h1>
+  <div class="form-group">
+    <label for="facultyId">Faculty ID:</label>
+    <input type="text" id="facultyId" required>
+    <br><br>
+    <label for="subjectId">Subject ID:</label>
+    <input type="text" id="subjectId" required>
+    <br><br>
+
+    <label for="sectionId">Section ID:</label>
+    <input type="text" id="sectionId" required>
+    <br><br>
+
+    <label for="isLab">Is Lab?</label>
+    <select id="isLab">
+      <option value="false">No</option>
+      <option value="true">Yes</option>
+    </select>
+    <br><br>
+
+    <button id="addSubject">Add Subject</button>
+    <button id="sendData">Send Data</button>
+    <button id="back">Back</button>
+
+    <!-- <h2>Output:</h2>
+    <div id="output"></div> -->
+
+  </div>
+
+
+  <!-- <script type="module" src="TTinput.js"></script> -->
+  <script>
+    document.getElementById("back").addEventListener("click", function () {
+      window.location.href = "index.html"; // or any other page
+    });
+  </script>
+
+  <script src="sectionmapclear.js"></script>
+
+
+</body>
+
+</html>
